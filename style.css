@@ -1,0 +1,42 @@
+img{
+    width: 50px;
+    color:blue;
+}
+
+.clickable{
+    padding: 10px;
+    cursor: none;
+    display: inline;
+    border-radius:9px;
+}
+
+.clickable:hover{
+    background-color: #eee;
+    animation-name: decreasePadding;
+    animation-duration: 0.5s ;
+    animation-fill-mode: forwards;
+}
+
+.clickable:hover > img{
+    animation-name: increaseSize;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.container{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+@keyframes increaseSize{
+    from {width: 50px}
+    to {width:56px;}
+}
+
+@keyframes decreasePadding{
+    from {padding: 10px}
+    to {padding:7px;}
+}
